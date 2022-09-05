@@ -1,0 +1,14 @@
+<html>
+
+<head>
+<script type="text/javascript" = src = "Lab01.js"></script>
+</head>
+
+<body>
+
+	var array = [];
+	
+
+</body>
+
+</html>
