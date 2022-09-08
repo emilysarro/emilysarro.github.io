@@ -1,15 +1,22 @@
+function arrayf()
+{
 var array = [];
-for (var total = 0; total<=5; total++)
+total = 0;
+for (var i = 0; i<=5; i++)
  {var val = math.floor(100*math.random());
  array.push(val);
  total += val;
  }
- 
+
  mean = total/array.length;
  
  var outarray = [];
  
+ for (var i = 0; i<=5; i++)
+ {
  if (array[total]>mean)
-	greater.push(array[total])
-		
+ {greater.push(array[total])
 	}	
+ }
+document.querySelector("#arrayOut").innerHTML="The array is:"+array+"<br>The mean is:"+mean+"<br>Greater:"+greater;
+}
