@@ -14,8 +14,8 @@ for (var i = 0; i<=5; i++)
  
  for (var i = 0; i<=5; i++)
  {
- if (array[total]>mean)
- {greater.push(array[total])
+ if (array[i]>mean)
+ {outarray.push(array[i])
 	}	
  }
 document.querySelector("#arrayOut").innerHTML="The array is:"+array+"<br>The mean is:"+mean+"<br>Greater:"+outarray;
