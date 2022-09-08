@@ -18,5 +18,5 @@ for (var i = 0; i<=5; i++)
  {greater.push(array[total])
 	}	
  }
-document.querySelector("#arrayOut").innerHTML="The array is:"+array+"<br>The mean is:"+mean+"<br>Greater:"+greater;
+document.querySelector("#arrayOut").innerHTML="The array is:"+array+"<br>The mean is:"+mean+"<br>Greater:"+outarray;
 }
