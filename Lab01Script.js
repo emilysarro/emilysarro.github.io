@@ -3,12 +3,14 @@ function arrayf()
 var array = [];
 total = 0;
 for (var i = 0; i<=5; i++)
- {var val = math.floor(100*math.random());
+ {
+ var val = math.floor(math.random()*100);
+ total += val
  array.push(val);
- total += val;
+ 
  }
 
- mean = total/array.length;
+ var mean = total/array.length;
  
  var outarray = [];
  
