@@ -11,6 +11,7 @@ for (var i = 0; i<=5; i++)
  }
 
  var mean = total/array.length;
+ console.log(mean);
  
  var outarray = [];
  
