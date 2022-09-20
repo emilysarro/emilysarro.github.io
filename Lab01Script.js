@@ -1,4 +1,4 @@
-function arrayf()
+function arrayfunct()
 {
 var array = [];
 total = 0;
