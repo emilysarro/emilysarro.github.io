@@ -52,7 +52,7 @@ function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
 
     gl.drawArrays( gl.POINTS, 0, points.length );
-    //gl.drawArrays( gl.LINES, 0, points.length );
+    gl.drawArrays( gl.LINES, 0, points.length );
     //gl.drawArrays( gl.LINE_STRIP, 0, points.length );
     //gl.drawArrays( gl.LINE_LOOP, 0, points.length );
     //gl.drawArrays( gl.TRIANGLES, 0, points.length );
