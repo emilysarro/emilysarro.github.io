@@ -10,12 +10,12 @@ function Newdate(){
  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
  var date = new Date;
- let year = date.getFullYear();
- let month = months[date.getMonth()];
- let day = date.getDate();
- let minute = date.getMinutes();
+ year = date.getFullYear();
+ month = months[date.getMonth()];
+ day = date.getDate();
+ minute = date.getMinutes();
  12hr = (document.getElementById("Hours").selectedIndex==0 ? true : false );
- let hour = date.getHours();
+ hour = date.getHours();
  hour = (12hr ? hour%12 : hour);
  return [year,month,day,hour,minute];
 }
