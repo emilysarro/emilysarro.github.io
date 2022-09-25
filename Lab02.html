@@ -1,0 +1,63 @@
+!// date and time functions from website resource provided in pdf, 
+debugged using Dr.Kruse's lab key//
+<html>
+<head>
+<script>
+var 12hr=true;
+
+function Newdate(){
+
+ const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+ var date = new Date;
+ let year = date.getFullYear();
+ let month = months[date.getMonth()];
+ let day = date.getDate();
+ let minute = date.getMinutes();
+ 12hr = (document.getElementById("Hours").selectedIndex==0 ? true : false );
+ let hour = date.getHours();
+ hour = (12hr ? hour%12 : hour);
+ return [year,month,day,hour,minute];
+}
+
+function datetime1() {
+ let datevalue = Newdate();
+ alert("The date is "+datevalue[1]+" "+datevalue[2]+", "+datevalue[0]);
+ alert("The time is "+datevalue[3]+" : "+datevalue[4]);
+}
+
+function datetime2() {
+ let datevalue = Newdate();
+ document.querySelector("#dateOut").innerHTML=
+    "The date is "+datevalue[1]+" "+datevalue[2]+", "+datevalue[0] + "<br>"+
+    "The time is "+datevalue[3]+" : "+datevalue[4];
+}
+
+</script>
+</head>
+
+<body>
+<button id= "Time Alert" onclick = "datetime1()">Date-Time in Alert Pop-up</button>
+
+<button id= "Time On Page" onclick = "datetime2()">Date-Time on Page</button>
+
+<select id = "Hours" size="1">
+  <option value = "0">12 Hours</option>
+  <option value = "1">24 Hours</option>
+</select>
+
+<div id="dateOut">
+  Count goes here
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
