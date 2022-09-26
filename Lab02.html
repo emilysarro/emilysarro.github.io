@@ -3,7 +3,7 @@ debugged using Dr.Kruse's lab key//-->
 <html>
 <head>
 <script>
-var 12hr=true;
+var hr12=true;
 
 function Newdate(){
 
@@ -14,9 +14,9 @@ function Newdate(){
  month = months[date.getMonth()];
  day = date.getDate();
  minute = date.getMinutes();
- 12hr = (document.getElementById("Hours").selectedIndex==0 ? true : false );
+ hr12 = (document.getElementById("Hours").selectedIndex==0 ? true : false );
  hour = date.getHours();
- hour = (12hr ? hour%12 : hour);
+ hour = (hr12 ? hour%12 : hour);
  return [year,month,day,hour,minute];
 }
 
