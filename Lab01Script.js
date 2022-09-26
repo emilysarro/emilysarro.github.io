@@ -4,7 +4,7 @@ var array = [];
 total = 0;
 for (var i = 0; i<=5; i++)
  {
- var val = math.floor(math.random()*100);
+ var val = Math.floor(Math.random()*100);
  total += val
  array.push(val);
  
