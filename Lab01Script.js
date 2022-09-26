@@ -1,3 +1,5 @@
+var total;
+
 function arrayfunct()
 {
 var array = [];
