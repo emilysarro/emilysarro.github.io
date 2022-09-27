@@ -51,11 +51,21 @@ function init()
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
 
-    //gl.drawArrays( gl.POINTS, 0, points.length );
-    gl.drawArrays( gl.LINES, 0, points.length );
-    //gl.drawArrays( gl.LINE_STRIP, 0, points.length );
-    //gl.drawArrays( gl.LINE_LOOP, 0, points.length );
-    //gl.drawArrays( gl.TRIANGLES, 0, points.length );
-    //gl.drawArrays( gl.TRIANGLE_STRIP, 0, points.length );
-    //gl.drawArrays( gl.TRIANGLE_FAN, 0, points.length );
+    gl.drawArrays( gl.POINTS, 0, points.length ); //This gives what I would expect. 
+	//There are large points on the canvas.
+    //gl.drawArrays( gl.LINES, 0, points.length ); //This gives just the lines, the points are not defined. 
+	//The lines are connecting two points, based on the order that the points are established. 
+	//One of the points is not connected because there are an odd amount of points.
+    //gl.drawArrays( gl.LINE_STRIP, 0, points.length ); //This connects all the points given.
+	// The lines connects the points in the order that they are given.
+	//Beginning and end points are not connected.
+   // gl.drawArrays( gl.LINE_LOOP, 0, points.length ); //This connects all the points given.
+	// The lines connects the points in the order that they are given.
+	//Beginning and end points are connected.
+    //gl.drawArrays( gl.TRIANGLES, 0, points.length ); // This creates three filled in triangles.
+	//The triangles are established based on the order the points are entered.
+    //gl.drawArrays( gl.TRIANGLE_STRIP, 0, points.length ); //This creates a mess of triangles on the canvas.
+	//because the shape is concave, the strip overlaps other points, making the individual triangles difficult to see
+    gl.drawArrays( gl.TRIANGLE_FAN, 0, points.length ); //This option also creates a confusing combination of triangles.
+	// Again, because the shape is concave, the common vertex creates a confusing array of triangles.
 }
