@@ -1,13 +1,18 @@
+"use strict";
+var gl;
+var vertices;
+kochmount();
+
 function kochmount(){
 
 var canvas = document.getElementById("gl-canvas");
-    gl = canvas.getContext('webgl2');
-    if (!gl) alert( "WebGL 2.0 isn't available" );
 
-var vertices = [
+   gl = canvas.getContext('webgl2');
+   if (!gl) alert( "WebGL 2.0 isn't available" );
+
+	vertices = [
 	vec2(-.99,0),
-	vec2(.99,0)
-];
+	vec2(.99,0)];
 
 
 //for (var i=0; positions.length < numPositions; i++){
@@ -41,6 +46,6 @@ render();
 
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
-    gl.drawArrays(gl.LINES, vertices[0],vertices[1]);
+    gl.drawArrays(gl.LINES, 0,vertices.length);
 }
 
