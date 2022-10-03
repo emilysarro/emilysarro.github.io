@@ -25,7 +25,7 @@ function init() {
 	render();
 	});
 
-    // 1 - listener event for the mouse click
+    // 1 - listener event for the mouse click t
     // 3 - will later need to be updated in conjunction with whether the points are saved
     canvas.addEventListener("mousedown", function(event){
 	if (!saved) points=[vec2(0.0,0.0)];
