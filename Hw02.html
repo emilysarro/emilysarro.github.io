@@ -1,12 +1,12 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-<script type="text/javascript" src="HW02Script.js"></script>
+<title>Koch Mountains Homework</title>
 </head>
 
 <body>
+<script type="text/javascript" src="HW02Script.js"></script>
 <canvas id="gl-canvas" width="512" height="512">
-Oops ... your browser doesn't support the HTML5 canvas element
 </canvas>
 
 <script id="fragment-shader" type="x-shader/x-fragment">
@@ -30,17 +30,17 @@ in vec4 aPosition;
 void
 main()
 {
-	  gl_PointSize = 1.0;
     gl_Position = aPosition;
 }
 </script>
 
-<form name=inclass>
-    <input type=slider value="Slider" onclick="kochmount();">
-  </form>
+<div>
+    recursive steps 0 <input id="slider" type="range" min="0" max="3" step="1" value="0"/>
+3
+  </div>
 
 <script type="text/javascript" src="C:/Users/emily/Documents/GitHub/emilysarro.github.io/cs330 Code For Moodle/Common/initShaders.js"></script>
 <script type="text/javascript" src="C:/Users/emily/Documents/GitHub/emilysarro.github.io/cs330 Code For Moodle/Common/MVnew.js"></script>
 </body>
 
-</html>
+</!DOCTYPE html>
