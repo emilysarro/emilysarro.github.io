@@ -7,22 +7,24 @@
 <body>
 <canvas id="gl-canvas" width="512" height="512"> </canvas>
 
+<button id="Morph">Toggle Morph
+On-Off</button>
+
+
 <script id="vertex-shader" type="x-shader/x-vertex">
 #version 300 es
 
-in vec4 aPosition;
-uniform float uTheta;
-
+in vec4 iPosition;
+in vec4 uPosition;
+uniform float t;
 void main()
 {
-    float s = sin(uTheta);
-    float c = cos(uTheta);
-
-    gl_Position.x = -s*aPosition.y + c*aPosition.x;
-    gl_Position.y =  s*aPosition.x + c*aPosition.y;
-    gl_Position.z = 0.0;
-    gl_Position.w = 1.0;
-
+ gl_Position.x = t*iPosition.x +
+(1.0-t)*uPosition.x;
+ gl_Position.y = t*iPosition.y +
+(1.0-t)*uPosition.y;
+ gl_Position.z = 0.0;
+ gl_Position.w = 1.0;
 }
 
 </script>
@@ -31,17 +33,18 @@ void main()
 #version 300 es
 
 precision mediump float;
-uniform vec4 aColor;
+uniform vec4 inColor;
+
 out vec4 fColor;
 
 void main()
 {
-    fColor = aColor;
+    fColor = inColor;
 }
 </script>
 
-<script src="../Common/initShaders.js"></script>
-<script src="../Common/MVnew.js"></script>
+<script src="C:/Users/emily/Documents/GitHub/emilysarro.github.io/cs330 Code For Moodle/Common/initShaders.js"></script>
+<script src="C:/Users/emily/Documents/GitHub/emilysarro.github.io/cs330 Code For Moodle/Common/MVnew.js"></script>
 <script src="HW03Script.js"></script>
 
 </body>
