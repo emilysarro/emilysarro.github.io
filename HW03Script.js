@@ -1,3 +1,6 @@
+//I used code from the book, previous labs (specifically the rotating triangle Lab and 
+//Lab 4), and code we went over in class.
+
 "use strict";
 var gl;
 var ipoints;
