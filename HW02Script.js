@@ -1,5 +1,6 @@
 //For this assignment, I compared my code for the 3rd homework assignment, and some of the labs
 //we worked on previously. I also used code (& pseudocode) that we discussed in class.
+//The key was used to do some debugging/tidying since it was supplied on moodle
 
 "use strict";
 var gl;
