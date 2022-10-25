@@ -12,6 +12,9 @@ var thetaLoc;
 var flag = true;
 var numElements = 29;
 
+//Every three num Elements gets rid of a triangle in the cube. As we decrease numElements,
+//the cube's sides start to disappear (since the triangles are no longer defined)
+
     var vertices = [
         vec3(-0.5, -0.5,  0.5), //0
         vec3(-0.5,  0.5,  0.5), //1
