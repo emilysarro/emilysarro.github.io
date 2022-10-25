@@ -11,6 +11,7 @@ var colors = [];
 var xAxis = 0;
 var yAxis = 1;
 var zAxis = 2;
+var flag = true;
 
 var axis = 0;
 var theta = [0, 0, 0];
@@ -70,8 +71,11 @@ function init()
         axis = zAxis;
     };
 
+document.getElementById("TButton").onclick = function(){flag = !flag;};
+
     render();
 }
+
 
 function colorCube()
 {
@@ -103,8 +107,9 @@ function quad(a, b, c, d)
         vec4(0.0, 1.0, 0.0, 1.0),  // green
         vec4(0.0, 0.0, 1.0, 1.0),  // blue
         vec4(1.0, 0.0, 1.0, 1.0),  // magenta
+	vec4(1.0, 1.0, 1.0, 1.0),   // white
         vec4(0.0, 1.0, 1.0, 1.0),  // cyan
-        vec4(1.0, 1.0, 1.0, 1.0)   // white
+        
     ];
 
     // We need to parition the quad into two triangles in order for
@@ -117,10 +122,10 @@ function quad(a, b, c, d)
 
     for ( var i = 0; i < indices.length; ++i ) {
         positions.push( vertices[indices[i]] );
-        //colors.push( vertexColors[indices[i]] );
+        colors.push( vertexColors[indices[i]] );
 
         // for solid colored faces use
-        colors.push(vertexColors[a]);
+      //  colors.push(vertexColors[a]);
     }
 }
 
@@ -128,7 +133,7 @@ function render()
 {
     gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-    theta[axis] += 2.0;
+    if (flag) theta[axis] += 2.0;
     gl.uniform3fv(thetaLoc, theta);
 
     gl.drawArrays(gl.TRIANGLES, 0, numPositions);
