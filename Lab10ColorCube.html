@@ -16,6 +16,7 @@
 #version 300 es
 
 in  vec4 aPosition;
+in vec4 iPosition;
 in  vec4 aColor;
 out vec4 vColor;
 
@@ -49,6 +50,14 @@ void main()
     vColor = aColor;
     gl_Position = rz * ry * rx * aPosition;
     gl_Position.z = -gl_Position.z;
+
+gl_Position.x = t*iPosition.x +
+(1.0-t)*aPosition.x;
+ gl_Position.y = t*iPosition.y +
+(1.0-t)*aPosition.y;
+ gl_Position.z = 0.0;
+ gl_Position.w = 1.0;
+
 }
 </script>
 
@@ -67,8 +76,8 @@ main()
 }
 </script>
 
-<script src="C:\Users\emily\Documents\GitHub\emilysarro.github.io\cs330 Code For Moodle\Common\initShaders.js"></script>
-<script src="C:\Users\emily\Documents\GitHub\emilysarro.github.io\cs330 Code For Moodle\Common\MVnew.js"></script>
+<script src="cs330 Code For Moodle/Common/initShaders.js"></script>
+<script src="cs330 Code For Moodle/Common/MVnew.js"></script>
 <script src="Lab10ColorCube.js"></script>
 
 </body>
