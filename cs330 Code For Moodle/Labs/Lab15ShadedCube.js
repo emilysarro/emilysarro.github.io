@@ -27,12 +27,12 @@ var lightDiffuse = vec4(1.0, 1.0, 1.0, 1.0);
 var lightSpecular = vec4(1.0, 1.0, 1.0, 1.0);
 
 // original
-//
+/*
 var materialAmbient = vec4(1.0, 0.0, 1.0, 1.0);
 var materialDiffuse = vec4(1.0, 0.8, 0.0, 1.0);
 var materialSpecular = vec4(1.0, 0.8, 0.0, 1.0);
 var materialShininess = 100.0;
-//
+*/
 
 // black plastic
 /*
@@ -83,12 +83,12 @@ var materialShininess = 51.2;
 */
 
 // pewter
-/*
+//
 var materialAmbient  = vec4(0.10588 , 0.058824 , 0.113725 , 1.0);
 var materialDiffuse  = vec4(0.42745 , 0.470588 , 0.541176 , 1.0);
 var materialSpecular  = vec4(0.3333 , 0.3333 , 0.521569 , 1.0);
 var materialShininess = 9.84615;
-*/
+//
 
 // silver
 /*
