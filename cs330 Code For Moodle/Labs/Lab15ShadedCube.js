@@ -33,6 +33,7 @@ var materialDiffuse = vec4(1.0, 0.8, 0.0, 1.0);
 var materialSpecular = vec4(1.0, 0.8, 0.0, 1.0);
 var materialShininess = 100.0;
 */
+//basic and orange. Little light
 
 // black plastic
 /*
@@ -42,6 +43,8 @@ var materialSpecular = vec4(0.5 , 0.5 , 0.5, 1.0);
 var materialShininess = 32.0;
 */
 
+//very dark. Little light shines at all
+
 // brass
 /*
 var materialAmbient  = vec4(0.329412 , 0.223529 , 0.027451 , 1.0);
@@ -49,6 +52,8 @@ var materialDiffuse  = vec4(0.780392 , 0.568627 , 0.113725 , 1.0);
 var materialSpecular  = vec4(0.992157 , 0.941176 , 0.807843, 1.0);
 var materialShininess = 27.8974;
 */
+
+//boring, similar to original.
 
 // bronze
 /*
@@ -58,6 +63,8 @@ var materialSpecular  = vec4(0.393548 , 0.271906 , 0.166721, 1.0);
 var materialShininess = 25.6;
 */
 
+//more brown than brass, a little shinier too
+
 // chrome
 /*
 var materialAmbient  = vec4(0.25 , 0.25 , 0.25 , 1.0);
@@ -65,6 +72,8 @@ var materialDiffuse  = vec4(0.4 , 0.4 , 0.4 , 1.0);
 var materialSpecular  = vec4(0.774597 , 0.774597 , 0.774597 , 1.0);
 var materialShininess = 76.8;
 */
+
+//not as shiny as you'd think
 
 // copper
 /*
@@ -74,6 +83,8 @@ var materialSpecular  = vec4(0.256777 , 0.137622 , 0.086014 , 1.0);
 var materialShininess = 76.8;
 */
 
+//very redish, shiner than the bronze, but similar
+
 // gold
 /*
 var materialAmbient  = vec4(0.24725 , 0.1995 , 0.0745 , 1.0);
@@ -82,13 +93,17 @@ var materialSpecular  = vec4(0.628281 , 0.555802 , 0.366065 , 1.0);
 var materialShininess = 51.2;
 */
 
+//like a yellow version of the original
+
 // pewter
-//
+/*
 var materialAmbient  = vec4(0.10588 , 0.058824 , 0.113725 , 1.0);
 var materialDiffuse  = vec4(0.42745 , 0.470588 , 0.541176 , 1.0);
 var materialSpecular  = vec4(0.3333 , 0.3333 , 0.521569 , 1.0);
 var materialShininess = 9.84615;
-//
+*/
+
+//probably my favorite. Not too shiny, silver color
 
 // silver
 /*
@@ -98,13 +113,17 @@ var materialSpecular  = vec4(0.508273 , 0.508273 , 0.508273 , 1.0);
 var materialShininess = 51.2;
 */
 
+//gray, not very reflective
+
 // polished silver
-/*
+//
 var materialAmbient  = vec4(0.23125 , 0.23125 , 0.23125 , 1.0);
 var materialDiffuse  = vec4(0.2775 , 0.2775 , 0.2775 , 1.0);
 var materialSpecular  = vec4(0.773911 , 0.773911 , 0.773911 , 1.0);
 var materialShininess = 89.6;
-*/
+//
+
+//darker then regular silver, but more reflective
 
 var ctm;
 var ambientColor, diffuseColor, specularColor;
