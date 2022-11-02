@@ -1,3 +1,7 @@
+//The transX is acting as a metric for translating the matrices. You can see in the Tx matrix in 
+//the html that it affects the angle and location at which the cube will be displayed. 
+//Instance ID keeps track of each cube that is created and displays them in order.
+
 "use strict";
 
 var canvas;
@@ -129,4 +133,5 @@ function render(){
     gl.uniformMatrix4fv(projectionMatrixLoc, false, flatten(projectionMatrix));
 
     gl.drawArraysInstanced(gl.TRIANGLES, 0, numPositions,3);
+
 }
