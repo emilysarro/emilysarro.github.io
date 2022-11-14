@@ -27,7 +27,7 @@ void
 main()
 {
   vColor = aColor;
-   vTexCoord = aTexCoord;
+  vTexCoord = aTexCoord;
   gl_Position = aPosition;
 }
 </script>
@@ -37,7 +37,7 @@ main()
 precision mediump float;
 
 in vec4 vColor;
-invec2 vTexCoord;
+in vec2 vTexCoord;
 
 out vec4 fColor;
 
@@ -47,10 +47,10 @@ void
 main()
 {
   //fColor = vColor;
- // initial, masked, underlying color will show
- fColor = vColor*texture(uTextureMap, vTexCoord);
- // not masked, will overwrite underlying colored triangle
- //fColor = texture(uTextureMap, vTexCoord);
+  // initial, masked, underlying color will show
+  fColor = vColor*texture(uTextureMap, vTexCoord);
+  // not masked, will overwrite underlying colored triangle
+  //fColor = texture(uTextureMap, vTexCoord);
 }
 </script>
 <script type="text/javascript" src="../Common/utility.js"></script>
