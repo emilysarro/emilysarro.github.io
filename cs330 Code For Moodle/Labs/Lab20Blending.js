@@ -6,17 +6,18 @@ var flag=true;
 var points;
 // triangle on right on top
 //
-points=[
-    vec4( -0.75 , -0.50 , 0.0 , 1.0  ),
-    vec4(  0.25 ,  0.00 , 0.0 , 1.0  ),
-    vec4( -0.75 ,  0.50 , 0.0 , 1.0  ),
-    vec4( -0.25 ,  0.00 , 0.0 , 1.0  ),
-    vec4(  0.75 , -0.50 , 0.0 , 1.0  ),
-    vec4(  0.75 ,  0.50 , 0.0 , 1.0  )
+/*points=[
+    vec4( -0.75 , -0.50 , 0.0 , 0.5  ),
+    vec4(  0.25 ,  0.00 , 0.0 , 0.5  ),
+    vec4( -0.75 ,  0.50 , 0.0 , 0.5  ),
+    vec4( -0.25 ,  0.00 , 0.0 , 0.5  ),
+    vec4(  0.75 , -0.50 , 0.0 , 0.5  ),
+    vec4(  0.75 ,  0.50 , 0.0 , 0.5  )
 ];
-//
+*/
+//messing with the alpha changes the size of the triangles
 // triangle on left on top
-/*
+//
 points=[
     vec4( -0.25 ,  0.00 , 0.0 , 1.0  ),
     vec4(  0.75 , -0.50 , 0.0 , 1.0  ),
@@ -25,7 +26,8 @@ points=[
     vec4(  0.25 ,  0.00 , 0.0 , 1.0  ),
     vec4( -0.75 ,  0.50 , 0.0 , 1.0  )
 ];
-*/
+// 
+//The triengles switch colors when you flip the order of rendering
 var positionsArray = [];
 
 var colors;
